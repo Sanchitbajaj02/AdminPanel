@@ -18,6 +18,7 @@
 
 <body class="bg-right">
     <div class="container-fluid mt-5">
+        <h1 class="heading">Admin Panel</h1>
         <div class="row">
             <div class="col-11 col-md-10 mx-auto">
                 <nav aria-label="breadcrumb" class="mb-3">
@@ -87,7 +88,7 @@
 
                             <!-- right side content -->
                             <div class="card-body tab-content border-0 bg-content">
-                                
+
                                 <!-- profile data -->
                                 <div class="tab-pane active" id="profile">
                                     <h6>YOUR PROFILE INFORMATION</h6>
@@ -121,8 +122,9 @@
                                             appears.
                                         </div>
                                         <br>
-                                        <button type="submit" class="btn btn-outline-primary">Update Profile</button>&nbsp;&nbsp;
-                                        <button type="reset" class="btn btn-outline-secondary">Reset Changes</button>
+                                        <button type="submit" class="btn btn-primary">Update
+                                            Profile</button>&nbsp;&nbsp;
+                                        <button type="reset" class="btn btn-secondary">Reset Changes</button>
 
                                     </form>
                                 </div>
@@ -157,6 +159,11 @@
                                     <hr>
                                     <form>
                                         <div class="mb-3">
+                                            <label for="email" class="form-label">Email Address</label>
+                                            <input type="text" class="form-control" id="Email"
+                                                placeholder="Enter Email Address">
+                                        </div>
+                                        <div class="mb-3">
                                             <label for="password" class="form-label">Password</label>
                                             <input type="password" class="form-control" id="password"
                                                 placeholder="Old Password"><br>
@@ -165,6 +172,7 @@
                                             <input type="password" class="form-control" id="password"
                                                 placeholder="Confirm New Password">
                                         </div>
+                                        <button class="btn btn-success" type="button">Update</button>
                                     </form>
 
                                     <hr>
@@ -172,7 +180,7 @@
                                         <div class="form-group">
                                             <label class="form-label d-block mb-2">Two Factor
                                                 Authentication</label>
-                                            <button class="btn btn-outline-info" type="submit" id="auth">Enable
+                                            <button class="btn btn-info" type="submit" id="auth">Enable
                                                 two-factor authentication</button>
                                             <p class="text-muted small">Two-factor Authentication adds an additional
                                                 layer of security to your account by requiring more than just a password
@@ -232,7 +240,7 @@
 
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" value=""
-                                                    id="flexCheckDefault2">
+                                                    id="flexCheckDefault2" checked>
                                                 <label class="form-check-label" for="flexCheckDefault2">
                                                     Email a digest summary of vulnerability
                                                 </label>
@@ -248,13 +256,6 @@
                                                     <div class="form-check form-switch">
                                                         <input class="form-check-input" type="checkbox"
                                                             id="flexSwitchCheckChecked1" checked>
-                                                    </div>
-                                                </li>
-                                                <li class="list-group-item">
-                                                    Updates for People
-                                                    <div class="form-check form-switch">
-                                                        <input class="form-check-input" type="checkbox"
-                                                            id="flexSwitchCheckChecked2" checked>
                                                     </div>
                                                 </li>
                                                 <li class="list-group-item">
@@ -292,7 +293,7 @@
                                             <label class="d-block">Payment Method</label>
                                             <small class="text-muted">You have not added a payment method</small>
                                             <br>
-                                            <button class="btn btn-outline-info my-2">Add Payment Method</button>
+                                            <button class="btn btn-info my-2">Add Payment Method</button>
                                         </div>
 
                                         <div class="mb-3">
