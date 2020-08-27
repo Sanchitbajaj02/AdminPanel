@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" />
+  <!-- Font Awsome Cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="scss/style.css" />
+
+  <title>Admin Panel</title>
+</head>
+
+<body class="bg-right">
+  <div class="container-fluid mt-5">
+    <h1 class="heading">Admin Panel</h1>
+    <div class="row">
+      <div class="col-11 col-md-10 mx-auto">
+        <nav aria-label="breadcrumb" class="mb-3">
+          <ol class="breadcrumb bg-common">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">User</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Profile Settings
+            </li>
+          </ol>
+        </nav>
+
+        <div class="row">
+          <!-- left side navbar -->
+          <div class="col-lg-3 col-md-4 d-md-block d-none">
+            <div class="card card-left bg-common">
+              <div class="card-body">
+                <nav class="nav d-md-block">
+                  <a data-toggle="tab" class="nav-link active" aria-current="page" href="#profile">
+                    <i class="fa fa-user mr-1"></i> Profile
+                  </a>
+                  <a data-toggle="tab" class="nav-link" href="#account">
+                    <i class="fa fa-user-cog mr-1"></i> Account Settings
+                  </a>
+                  <a data-toggle="tab" class="nav-link" href="#security">
+                    <i class="fa fa-user-shield mr-1"></i> Security
+                  </a>
+                  <a data-toggle="tab" class="nav-link" href="#notify">
+                    <i class="fa fa-bell mr-1"></i> Notification
+                  </a>
+                  <a data-toggle="tab" class="nav-link" href="#billing">
+                    <i class="fa fa-money-check-alt mr-1"></i> Billing
+                  </a>
+                </nav>
+              </div>
+            </div>
+          </div>
+
+          <!-- right side div -->
+          <div class="col-lg-9 col-md-8">
+            <div class="card">
+              <div class="card-header border-bottom mb-1 d-md-none bg-common">
+                <ul class="nav nav-tabs card-header-tabs nav-fill">
+                  <li class="nav-item">
+                    <a data-toggle="tab" class="nav-link active" aria-current="page" href="#profile"><i
+                        class="fa fa-user mr-1"></i></a>
+                  </li>
+                  <li class="nav-item">
+                    <a data-toggle="tab" class="nav-link" href="#account"><i class="fa fa-user-cog mr-1"></i></a>
+                  </li>
+                  <li class="nav-item">
+                    <a data-toggle="tab" class="nav-link" href="#security"><i class="fa fa-user-shield mr-1"></i></a>
+                  </li>
+                  <li class="nav-item">
+                    <a data-toggle="tab" class="nav-link" href="#notify"><i class="fa fa-bell mr-1"></i></a>
+                  </li>
+                  <li class="nav-item">
+                    <a data-toggle="tab" class="nav-link" href="#billing"><i class="fa fa-money-check-alt mr-1"></i></a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- right side content -->
+              <div class="card-body tab-content border-0 bg-content">
+                <!-- profile data -->
+                <div class="tab-pane active" id="profile">
+                  <h6>YOUR PROFILE INFORMATION</h6>
+                  <hr />
+
+                  <form id="submit-form" method="POST" action="http://localhost:3000/">
+                    <div class="mb-3">
+                      <label for="fullname" class="form-label">Full Name</label>
+                      <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Tony Stark" />
+                      <small class="form-text text-muted">Please enter your Full Name</small>
+                    </div>
+                    <div class="mb-3">
+                      <label for="textarea" class="form-label">Your Bio</label>
+                      <textarea class="form-control" id="textarea" name="textarea" rows="3"
+                        placeholder="I am Ironman"></textarea>
+                    </div>
+                    <div class="mb-3">
+                      <label for="link" class="form-label">URL</label>
+                      <input type="text" class="form-control" id="link" name="link" placeholder="www.avengers.com" />
+                    </div>
+                    <div class="mb-3">
+                      <label for="location" class="form-label">Location</label>
+                      <input type="text" class="form-control" id="location" name="location"
+                        placeholder="Malibu, New York" />
+                    </div>
+                    <div class="form-group form-text text-muted small">
+                      All of the fields on this page are optional and can be
+                      deleted at any time, and by filling them out, you're
+                      giving us consent to share this data whereever your user
+                      profile appears.
+                    </div>
+                    <br />
+                    <button type="submit" class="btn btn-primary">
+                      Update Profile</button>&nbsp;&nbsp;
+                    <button type="reset" class="btn btn-secondary">
+                      Reset Changes
+                    </button>
+                  </form>
+                </div>
+
+                <!-- account data -->
+                <div class="tab-pane" id="account">
+                  <h6>ACCOUNT SETTINGS</h6>
+                  <hr />
+                  <form>
+                    <div class="mb-3">
+                      <label for="username" class="form-label">Username</label>
+                      <input type="text" class="form-control" id="username" placeholder="Enter Username" />
+                      <small class="form-text text-muted">After changing your username, your username becomes
+                        available for anyone else to claim.</small>
+                    </div>
+                    <hr />
+                    <div class="mb-3">
+                      <label for="deleteaccount" class="form-label text-danger">Delete Account</label>
+                      <p class="text-muted">
+                        Once you delete your account, there is no going back.
+                        Please be certain.
+                      </p>
+                    </div>
+                    <br />
+                    <button type="submit" class="btn btn-danger">
+                      Delete Account
+                    </button>
+                  </form>
+                </div>
+
+                <!-- security data -->
+                <div class="tab-pane" id="security">
+                  <h6>SECURITY SETTINGS</h6>
+                  <hr />
+                  <form>
+                    <div class="mb-3">
+                      <label for="email" class="form-label">Email Address</label>
+                      <input type="text" class="form-control" id="Email" placeholder="Enter Email Address" />
+                    </div>
+                    <div class="mb-3">
+                      <label for="password" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="password" placeholder="Old Password" /><br />
+                      <input type="password" class="form-control" id="password" placeholder="New Password" /><br />
+                      <input type="password" class="form-control" id="password" placeholder="Confirm New Password" />
+                    </div>
+                    <button class="btn btn-success" type="button">
+                      Update
+                    </button>
+                  </form>
+
+                  <hr />
+                  <form>
+                    <div class="form-group">
+                      <label class="form-label d-block mb-2">Two Factor Authentication</label>
+                      <button class="btn btn-info" type="submit" id="auth">
+                        Enable two-factor authentication
+                      </button>
+                      <p class="text-muted small">
+                        Two-factor Authentication adds an additional layer of
+                        security to your account by requiring more than just a
+                        password to login.
+                      </p>
+                    </div>
+                  </form>
+
+                  <hr />
+                  <form>
+                    <div class="form-group">
+                      <label class="form-label d-block mb-2">Sessions</label>
+                      <p class="text-muted small">
+                        This is a list of devices that have logged into your
+                        account. Revoke any sessions that you do not
+                        recognize.
+                      </p>
+
+                      <ul class="list-group">
+                        <li class="list-group-item">
+                          <div>
+                            <h6>28°40'31.9"N 77°12'19.9"E</h6>
+                            <small class="text-muted">Your current session seen in Delhi</small>
+                          </div>
+                          <button class="btn btn-light btn-sm ml-auto" type="button">
+                            More Info
+                          </button>
+                        </li>
+                        <li class="list-group-item">
+                          <div>
+                            <h6>28°40'13.4"N 77°11'37.2"E</h6>
+                            <small class="text-muted">Your current session seen in Delhi</small>
+                          </div>
+                          <button class="btn btn-light btn-sm ml-auto" type="button">
+                            More Info
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </form>
+                </div>
+
+                <!-- notify data -->
+                <div class="tab-pane" id="notify">
+                  <h6>NOTIFICATION SETTINGS</h6>
+                  <hr />
+                  <form>
+                    <div class="mb-3">
+                      <!-- security alerts -->
+                      <label class="d-block">Seurity Alerts</label>
+                      <small class="form-text text-muted">Receive security alert notification via email</small>
+
+                      <div class="form-check mt-3">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1" />
+                        <label class="form-check-label" for="flexCheckDefault1">
+                          Email each time a vulnerability is found
+                        </label>
+                      </div>
+
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" checked />
+                        <label class="form-check-label" for="flexCheckDefault2">
+                          Email a digest summary of vulnerability
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- sms notification -->
+                    <div class="mb-3">
+                      <label class="d-block mb-2">SMS Notifications</label>
+                      <ul class="list-group">
+                        <li class="list-group-item">
+                          Comments
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked1" checked />
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          Reminders
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked3" checked />
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          Events
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked4" checked />
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          Pages You Follow
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked5" />
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </form>
+                </div>
+
+                <!-- billing data -->
+                <div class="tab-pane" id="billing">
+                  <h6>BILLING SETTINGS</h6>
+                  <hr />
+                  <form>
+                    <div class="mb-3">
+                      <label class="d-block">Payment Method</label>
+                      <small class="text-muted">You have not added a payment method</small>
+                      <br />
+                      <button class="btn btn-info my-2">
+                        Add Payment Method
+                      </button>
+                    </div>
+
+                    <div class="mb-3">
+                      <label class="d-block">Payment History</label>
+                      <div class="border p-3 text-center">
+                        You have not made any payment
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- Popper.js first, then Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+  
+  
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const submitForm = document.querySelector("#submit-form");
+
+      submitForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        // const resp =
+        //await fetch("http://localhost:3000/", {
+        //   method: "POST",
+        // });
+        // await
+        await fetch("http://localhost:3000/", {
+          method: "POST",
+          body: JSON.stringify({
+            name: submitForm["fullname"].value,
+            city: "Delhi",
+          }),
+          headers: {
+            "Content-type": "application/json",
+            "authToken": "inqiwbegiubqwegibqegbiuqebgiubqwigjrjgnqwkrgnirowgopqwet[peqwt[weqjpnqwetnqklwentkwlqetpoqwfhpoeqwhgobqwegbeb"
+          },
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
